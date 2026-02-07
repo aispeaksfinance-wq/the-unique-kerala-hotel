@@ -37,7 +37,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h4 className="font-bold text-xl mb-1">Reservations</h4>
-                                    <p className="text-white/60 italic">+91 98765 43210<br />+91 484 234567</p>
+                                    <p className="text-white/60 italic">+91 7012657177</p>
                                 </div>
                             </div>
 
