@@ -33,14 +33,14 @@ const Contact = () => {
                                 <Phone className="w-6 h-6 text-kerala-gold mt-1" />
                                 <div>
                                     <h3 className="text-xl font-bold text-kerala-gold mb-1">{t.contact.reservations}</h3>
-                                    <p className="text-white/80">+91 484 234 5678</p>
+                                    <p className="text-white/80">+91 7012657177</p>
                                 </div>
                             </div>
                             <div className="flex items-start space-x-4">
                                 <Mail className="w-6 h-6 text-kerala-gold mt-1" />
                                 <div>
                                     <h3 className="text-xl font-bold text-kerala-gold mb-1">{t.contact.email}</h3>
-                                    <p className="text-white/80">hello@uniquekeralahotel.com</p>
+                                    <p className="text-white/80">krishnajiji@gmail.com</p>
                                 </div>
                             </div>
                         </div>
