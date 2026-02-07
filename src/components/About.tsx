@@ -21,15 +21,15 @@ const About = () => {
                     >
                         <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-8 border-white">
                             <img
-                                src="https://images.unsplash.com/photo-1596797038530-2c39fa802279?q=80&w=1000&auto=format&fit=crop"
-                                alt="Kerala Traditional Chef"
+                                src="/about/puttu.jfif"
+                                alt="Authentic Kerala Puttu"
                                 className="w-full h-auto"
                             />
                         </div>
                         {/* Accent Image */}
                         <div className="absolute -bottom-10 -right-10 w-1/2 rounded-xl overflow-hidden shadow-2xl border-4 border-kerala-gold z-20 hidden md:block">
                             <img
-                                src="https://images.unsplash.com/photo-1516684732162-798a0062be99?q=80&w=600&auto=format&fit=crop"
+                                src="/gallery/seafood-special.jpg"
                                 alt="Traditional Spices"
                                 className="w-full h-auto"
                             />
@@ -58,7 +58,7 @@ const About = () => {
 
                         <div className="space-y-4">
                             <p className="text-lg text-coconut-brown leading-relaxed">
-                                At Kerala Delight, we believe that food is more than just sustenance; it's a journey through history.
+                                At Unique Kerala Hotel, we believe that food is more than just sustenance; it's a journey through history.
                                 Our recipes have been passed down through generations, utilizing hand-picked spices, fresh coconut milk,
                                 and the finest local ingredients.
                             </p>

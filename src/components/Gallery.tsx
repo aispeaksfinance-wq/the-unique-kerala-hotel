@@ -2,12 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const images = [
-    { url: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=800', title: 'Backwaters' },
-    { url: 'https://images.unsplash.com/photo-1593693397690-362cb9666fc2?q=80&w=800', title: 'Traditional Kitchen' },
-    { url: 'https://images.unsplash.com/photo-1516684732162-798a0062be99?q=80&w=800', title: 'Spice Market' },
-    { url: 'https://images.unsplash.com/photo-1596797038530-2c39fa802279?q=80&w=800', title: 'Kathakali Performance' },
-    { url: 'https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?q=80&w=800', title: 'Seafood Special' },
-    { url: 'https://images.unsplash.com/photo-1515091943-9d5c0ad475af?q=80&w=800', title: 'Palm Groves' },
+    { url: '/gallery/backwaters.jpg', title: 'Comfort Cup' },
+    { url: '/gallery/traditional-kitchen.jpg', title: 'Traditional Kitchen' },
+    { url: '/gallery/spice-market.jpg', title: 'Spice Market' },
+    { url: '/gallery/seafood-special.jpg', title: 'Seafood Special' },
+    { url: '/gallery/palm-groves.jpg', title: 'Puttu Heritage' },
 ];
 
 const Gallery = () => {
