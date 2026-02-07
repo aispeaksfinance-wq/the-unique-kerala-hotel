@@ -72,16 +72,16 @@ const Contact = () => {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <label className="block text-coconut-brown font-semibold mb-2">Name</label>
-                                    <input type="text" className="w-full px-4 py-3 bg-cream-white rounded-xl focus:outline-none focus:ring-2 focus:ring-kerala-gold text-coconut-brown" placeholder="Your Name" />
+                                    <input type="text" className="w-full px-4 py-3 bg-cream-white rounded-xl focus:outline-none focus:ring-2 focus:ring-kerala-gold text-coconut-brown text-base" placeholder="Your Name" />
                                 </div>
                                 <div>
                                     <label className="block text-coconut-brown font-semibold mb-2">Email</label>
-                                    <input type="email" className="w-full px-4 py-3 bg-cream-white rounded-xl focus:outline-none focus:ring-2 focus:ring-kerala-gold text-coconut-brown" placeholder="email@example.com" />
+                                    <input type="email" className="w-full px-4 py-3 bg-cream-white rounded-xl focus:outline-none focus:ring-2 focus:ring-kerala-gold text-coconut-brown text-base" placeholder="email@example.com" />
                                 </div>
                             </div>
                             <div>
                                 <label className="block text-coconut-brown font-semibold mb-2">Subject</label>
-                                <select className="w-full px-4 py-3 bg-cream-white rounded-xl focus:outline-none focus:ring-2 focus:ring-kerala-gold text-coconut-brown">
+                                <select className="w-full px-4 py-3 bg-cream-white rounded-xl focus:outline-none focus:ring-2 focus:ring-kerala-gold text-coconut-brown text-base">
                                     <option>Table Reservation</option>
                                     <option>Event Inquiry</option>
                                     <option>Catering</option>
@@ -90,7 +90,7 @@ const Contact = () => {
                             </div>
                             <div>
                                 <label className="block text-coconut-brown font-semibold mb-2">Message</label>
-                                <textarea rows={4} className="w-full px-4 py-3 bg-cream-white rounded-xl focus:outline-none focus:ring-2 focus:ring-kerala-gold text-coconut-brown" placeholder="How can we help you?"></textarea>
+                                <textarea rows={4} className="w-full px-4 py-3 bg-cream-white rounded-xl focus:outline-none focus:ring-2 focus:ring-kerala-gold text-coconut-brown text-base" placeholder="How can we help you?"></textarea>
                             </div>
                             <button className="w-full py-4 bg-kerala-gold text-white font-bold rounded-xl shadow-lg hover:bg-kerala-gold/90 transition-all transform hover:scale-[1.02] active:scale-95">
                                 Send Message

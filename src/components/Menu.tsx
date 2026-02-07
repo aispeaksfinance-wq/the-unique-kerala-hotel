@@ -160,7 +160,7 @@ const Menu = () => {
                                 <button
                                     key={i}
                                     onClick={() => setCurrentPage(i + 1)}
-                                    className={`w-10 h-10 rounded-full font-bold transition-all ${currentPage === i + 1
+                                    className={`w-12 h-12 rounded-full font-bold transition-all ${currentPage === i + 1
                                         ? 'bg-kerala-green text-white shadow-lg'
                                         : 'bg-cream-white text-coconut-brown hover:border-kerala-gold border border-transparent'
                                         }`}

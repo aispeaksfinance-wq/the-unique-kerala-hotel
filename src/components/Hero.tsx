@@ -25,7 +25,7 @@ const Hero = () => {
                     <span className="text-kerala-gold font-serif text-xl md:text-2xl tracking-[0.3em] uppercase mb-4 block">
                         Authentic Taste of God's Own Country
                     </span>
-                    <h1 className="text-5xl md:text-8xl font-bold text-white mb-6 leading-tight">
+                    <h1 className="text-4xl sm:text-5xl md:text-8xl font-bold text-white mb-6 leading-tight">
                         Unique Kerala <span className="text-kerala-gold">Hotel</span>
                     </h1>
                     <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto font-light leading-relaxed">
