@@ -26,7 +26,7 @@ const Contact = () => {
                                 <MapPin className="w-6 h-6 text-kerala-gold mt-1" />
                                 <div>
                                     <h3 className="text-xl font-bold text-kerala-gold mb-1">{t.contact.location}</h3>
-                                    <p className="text-white/80">Unique Kerala Hotel<br />MG Road, Kochi, Kerala 682001</p>
+                                    <p className="text-white/80">Unique Kerala Hotel<br />XHM7+H47, 2nd Main Rd, Ramachandrapuram, 4N Block,Srirampura, Bangalore, Karnataka, 560010</p>
                                 </div>
                             </div>
                             <div className="flex items-start space-x-4">
