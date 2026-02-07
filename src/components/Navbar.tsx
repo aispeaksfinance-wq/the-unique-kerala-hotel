@@ -81,7 +81,14 @@ const Navbar = () => {
                                 <a
                                     key={link.name}
                                     href={link.href}
-                                    onClick={() => setIsOpen(false)}
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        setIsOpen(false);
+                                        const element = document.querySelector(link.href);
+                                        if (element) {
+                                            element.scrollIntoView({ behavior: 'smooth' });
+                                        }
+                                    }}
                                     className="block px-3 py-3 text-lg font-medium text-coconut-brown hover:text-kerala-green hover:bg-cream-white transition-colors"
                                 >
                                     {link.name}
