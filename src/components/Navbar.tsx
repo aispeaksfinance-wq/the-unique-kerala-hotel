@@ -35,7 +35,7 @@ const Navbar = () => {
                         className="flex items-center space-x-2"
                     >
                         <UtensilsCrossed className="text-kerala-green w-8 h-8" />
-                        <span className="text-2xl font-serif font-bold text-kerala-green tracking-wider">
+                        <span className="text-xl md:text-2xl font-serif font-bold text-kerala-green tracking-wider">
                             UNIQUE KERALA<span className="text-kerala-gold"> HOTEL</span>
                         </span>
                     </motion.div>

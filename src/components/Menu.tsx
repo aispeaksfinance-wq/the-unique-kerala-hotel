@@ -76,7 +76,7 @@ const Menu = () => {
     };
 
     return (
-        <section id="menu" className="py-24 bg-white relative">
+        <section id="menu" className="py-24 bg-white relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -95,7 +95,7 @@ const Menu = () => {
                         <button
                             key={category}
                             onClick={() => handleCategoryChange(category)}
-                            className={`px-8 py-2 rounded-full font-medium transition-all duration-300 border ${activeCategory === category
+                            className={`px-5 sm:px-8 py-2 rounded-full font-medium transition-all duration-300 border ${activeCategory === category
                                 ? 'bg-kerala-green text-white border-kerala-green shadow-lg'
                                 : 'bg-cream-white text-coconut-brown border-transparent hover:border-kerala-gold'
                                 }`}

@@ -22,7 +22,7 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
-                    <span className="text-kerala-gold font-serif text-xl md:text-2xl tracking-[0.3em] uppercase mb-4 block">
+                    <span className="text-kerala-gold font-serif text-lg sm:text-xl md:text-2xl tracking-widest md:tracking-[0.3em] uppercase mb-4 block">
                         Authentic Taste of God's Own Country
                     </span>
                     <h1 className="text-4xl sm:text-5xl md:text-8xl font-bold text-white mb-6 leading-tight">

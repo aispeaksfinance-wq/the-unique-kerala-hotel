@@ -16,10 +16,12 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
   }
 
   body {
     @apply bg-cream-white text-coconut-brown font-sans;
+    overflow-x: hidden;
   }
 
   h1,

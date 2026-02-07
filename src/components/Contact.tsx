@@ -10,7 +10,7 @@ const Contact = () => {
             </div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
                     <div className="space-y-12">
                         <div>
                             <h2 className="text-4xl md:text-5xl font-bold mb-6">Visit Us</h2>
