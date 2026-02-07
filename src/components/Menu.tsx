@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 const menuCategories = ['All', 'Breakfast', 'Main Course', 'Starters & Sides', 'Seafood'];
 
@@ -61,6 +62,7 @@ const ITEMS_PER_PAGE = 6;
 const Menu = () => {
     const [activeCategory, setActiveCategory] = useState('All');
     const [currentPage, setCurrentPage] = useState(1);
+    const { t } = useLanguage();
 
     const filteredItems = activeCategory === 'All'
         ? menuItems
@@ -75,6 +77,17 @@ const Menu = () => {
         setCurrentPage(1);
     };
 
+    const getTranslatedCategory = (cat: string) => {
+        switch (cat) {
+            case 'All': return t.menu.categories.all;
+            case 'Breakfast': return t.menu.categories.breakfast;
+            case 'Main Course': return t.menu.categories.mainCourse;
+            case 'Seafood': return t.menu.categories.seafood;
+            case 'Starters & Sides': return t.menu.categories.starters;
+            default: return cat;
+        }
+    };
+
     return (
         <section id="menu" className="py-24 bg-white relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -84,8 +97,8 @@ const Menu = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <span className="text-kerala-gold font-serif text-lg tracking-widest uppercase mb-2 block">Our Menu</span>
-                    <h2 className="text-4xl md:text-5xl font-bold text-kerala-green mb-6">Culinary Delights</h2>
+                    <span className="text-kerala-gold font-serif text-lg tracking-widest uppercase mb-2 block">{t.menu.subtitle}</span>
+                    <h2 className="text-4xl md:text-5xl font-bold text-kerala-green mb-6">{t.menu.title}</h2>
                     <div className="w-24 h-1 bg-kerala-gold mx-auto rounded-full" />
                 </motion.div>
 
@@ -100,7 +113,7 @@ const Menu = () => {
                                 : 'bg-cream-white text-coconut-brown border-transparent hover:border-kerala-gold'
                                 }`}
                         >
-                            {category}
+                            {getTranslatedCategory(category)}
                         </button>
                     ))}
                 </div>
@@ -130,7 +143,7 @@ const Menu = () => {
                                 </div>
                                 <div className="p-6">
                                     <span className="text-kerala-gold text-xs font-bold uppercase tracking-wider mb-2 block">
-                                        {item.category}
+                                        {getTranslatedCategory(item.category)}
                                     </span>
                                     <h3 className="text-xl font-bold text-kerala-green mb-2 group-hover:text-palm-green transition-colors">
                                         {item.name}

@@ -1,7 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../context/LanguageContext';
 
 const Hero = () => {
+    const { t } = useLanguage();
+
     return (
         <section id="home" className="relative h-screen w-full overflow-hidden flex items-center justify-center">
             {/* Background Image - Kerala Backwaters/Palm Trees vibe */}
@@ -23,14 +26,13 @@ const Hero = () => {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
                     <span className="text-kerala-gold font-serif text-lg sm:text-xl md:text-2xl tracking-widest md:tracking-[0.3em] uppercase mb-4 block">
-                        Authentic Taste of God's Own Country
+                        {t.hero.subtitle}
                     </span>
                     <h1 className="text-4xl sm:text-5xl md:text-8xl font-bold text-white mb-6 leading-tight">
-                        Unique Kerala <span className="text-kerala-gold">Hotel</span>
+                        {t.hero.title} <span className="text-kerala-gold">{t.hero.titleSpan}</span>
                     </h1>
                     <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto font-light leading-relaxed">
-                        Experience the rich culinary heritage of Kerala. From spicy seafood to traditional Sadhya,
-                        every dish is a celebration of flavor and tradition.
+                        {t.hero.description}
                     </p>
                     <motion.div
                         initial={{ opacity: 0 }}
@@ -42,7 +44,7 @@ const Hero = () => {
                             href="#menu"
                             className="px-8 py-4 bg-kerala-green text-white font-semibold rounded-full hover:bg-kerala-green/90 transition-all transform hover:scale-105 shadow-lg shadow-kerala-green/20"
                         >
-                            Explore Menu
+                            {t.hero.cta}
                         </a>
                     </motion.div>
                 </motion.div>

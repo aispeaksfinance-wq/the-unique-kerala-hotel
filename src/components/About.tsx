@@ -1,7 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../context/LanguageContext';
 
 const About = () => {
+    const { t } = useLanguage();
+
     return (
         <section id="about" className="py-24 bg-[var(--color-cream-white)] relative overflow-hidden">
             {/* Decorative Background Patterns */}
@@ -45,25 +48,22 @@ const About = () => {
                         className="lg:w-1/2 space-y-8"
                     >
                         <div>
-                            <span className="text-kerala-gold font-serif text-lg tracking-widest uppercase mb-2 block">Our Heritage</span>
+                            <span className="text-kerala-gold font-serif text-lg tracking-widest uppercase mb-2 block">{t.about.subtitle}</span>
                             <h2 className="text-4xl md:text-5xl font-bold text-kerala-green leading-tight">
-                                Preserving the Authentic Flavors of Kerala
+                                {t.about.title}
                             </h2>
                         </div>
 
                         <p className="text-lg text-coconut-brown/80 leading-relaxed font-light italic">
-                            "Kerala's cuisine is as diverse as its landscape. From the fiery seafood of the coast to the subtle,
-                            aromatic vegetarian feasts of the highlands, we bring you the soul of Malayali tradition."
+                            {t.about.description}
                         </p>
 
                         <div className="space-y-4">
                             <p className="text-lg text-coconut-brown leading-relaxed">
-                                At Unique Kerala Hotel, we believe that food is more than just sustenance; it's a journey through history.
-                                Our recipes have been passed down through generations, utilizing hand-picked spices, fresh coconut milk,
-                                and the finest local ingredients.
+                                {t.about.details}
                             </p>
                             <ul className="grid grid-cols-2 gap-4 pt-4">
-                                {['Traditional Spices', 'Daily Fresh Produce', 'Authentic Recipes', 'Cultural Ambiance'].map((item) => (
+                                {t.about.features.map((item) => (
                                     <li key={item} className="flex items-center space-x-2 text-kerala-green font-medium">
                                         <span className="w-2 h-2 bg-kerala-gold rounded-full" />
                                         <span>{item}</span>
@@ -73,7 +73,7 @@ const About = () => {
                         </div>
 
                         <button className="px-10 py-4 border-2 border-kerala-green text-kerala-green hover:bg-kerala-green hover:text-white transition-all duration-300 font-semibold rounded-lg uppercase tracking-wider text-sm">
-                            Discover Our Story
+                            {t.about.cta}
                         </button>
                     </motion.div>
                 </div>

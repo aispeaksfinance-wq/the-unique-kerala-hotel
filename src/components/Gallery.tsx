@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../context/LanguageContext';
 
 const images = [
     { url: '/gallery/backwaters.jpg', title: 'Comfort Cup' },
@@ -10,6 +11,8 @@ const images = [
 ];
 
 const Gallery = () => {
+    const { t } = useLanguage();
+
     return (
         <section id="gallery" className="py-24 bg-cream-white overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -19,8 +22,8 @@ const Gallery = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <span className="text-kerala-gold font-serif text-lg tracking-widest uppercase mb-2 block">Moments</span>
-                    <h2 className="text-4xl md:text-5xl font-bold text-kerala-green mb-6">Our Visual Story</h2>
+                    <span className="text-kerala-gold font-serif text-lg tracking-widest uppercase mb-2 block">{t.gallery.subtitle}</span>
+                    <h2 className="text-4xl md:text-5xl font-bold text-kerala-green mb-6">{t.gallery.title}</h2>
                     <div className="w-24 h-1 bg-kerala-gold mx-auto rounded-full" />
                 </motion.div>
 

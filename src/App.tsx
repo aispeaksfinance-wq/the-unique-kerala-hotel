@@ -6,18 +6,22 @@ import Menu from './components/Menu';
 import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 
+import { LanguageProvider } from './context/LanguageContext';
+
 function App() {
     return (
-        <div className="min-h-screen bg-[var(--color-cream-white)]">
-            <Navbar />
-            <main>
-                <Hero />
-                <About />
-                <Menu />
-                <Gallery />
-                <Contact />
-            </main>
-        </div>
+        <LanguageProvider>
+            <div className="min-h-screen bg-[var(--color-cream-white)]">
+                <Navbar />
+                <main>
+                    <Hero />
+                    <About />
+                    <Menu />
+                    <Gallery />
+                    <Contact />
+                </main>
+            </div>
+        </LanguageProvider>
     );
 }
 

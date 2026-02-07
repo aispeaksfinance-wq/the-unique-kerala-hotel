@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, UtensilsCrossed } from 'lucide-react';
-
-const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Menu', href: '#menu' },
-    { name: 'Gallery', href: '#gallery' },
-    { name: 'Contact', href: '#contact' },
-];
+import { Menu, X, UtensilsCrossed, Globe } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const { language, setLanguage, t } = useLanguage();
+
+    const navLinks = [
+        { name: t.nav.home, href: '#home' },
+        { name: t.nav.about, href: '#about' },
+        { name: t.nav.menu, href: '#menu' },
+        { name: t.nav.gallery, href: '#gallery' },
+        { name: t.nav.contact, href: '#contact' },
+    ];
 
     useEffect(() => {
         const handleScroll = () => {
@@ -21,6 +23,21 @@ const Navbar = () => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    const toggleLanguage = () => {
+        if (language === 'en') setLanguage('ta');
+        else if (language === 'ta') setLanguage('kn');
+        else setLanguage('en');
+    };
+
+    const getLangLabel = (lang: string) => {
+        switch (lang) {
+            case 'en': return 'EN';
+            case 'ta': return 'TA';
+            case 'kn': return 'KN';
+            default: return 'EN';
+        }
+    };
 
     return (
         <nav
@@ -40,7 +57,7 @@ const Navbar = () => {
                         </span>
                     </motion.div>
 
-                    <div className="hidden md:flex space-x-8">
+                    <div className="hidden md:flex items-center space-x-8">
                         {navLinks.map((link, index) => (
                             <motion.a
                                 key={link.name}
@@ -54,9 +71,24 @@ const Navbar = () => {
                                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-kerala-gold transition-all group-hover:w-full" />
                             </motion.a>
                         ))}
+
+                        <button
+                            onClick={toggleLanguage}
+                            className="flex items-center gap-1 font-bold text-kerala-green border border-kerala-gold/30 px-3 py-1 rounded-full hover:bg-kerala-gold hover:text-white transition-all"
+                        >
+                            <Globe size={16} />
+                            <span>{getLangLabel(language)}</span>
+                        </button>
                     </div>
 
-                    <div className="md:hidden">
+                    <div className="md:hidden flex items-center gap-4">
+                        <button
+                            onClick={toggleLanguage}
+                            className="flex items-center gap-1 font-bold text-kerala-green border border-kerala-gold/30 px-3 py-1 rounded-full hover:bg-kerala-gold hover:text-white transition-all"
+                        >
+                            <span>{getLangLabel(language)}</span>
+                        </button>
+
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             className="text-kerala-green p-3 focus:outline-none hover:bg-black/5 rounded-full transition-colors"
