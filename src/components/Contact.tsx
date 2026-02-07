@@ -27,7 +27,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h4 className="font-bold text-xl mb-1">Our Location</h4>
-                                    <p className="text-white/60 italic">123 Spice Route, Fort Kochi,<br />Kerala, India - 682001</p>
+                                    <p className="text-white/60 italic">XHM7+H47, 2nd Main Rd, Ramachandrapuram,<br />4N Block, Srirampura, Bangalore, Karnataka, 560010</p>
                                 </div>
                             </div>
 
